@@ -20,6 +20,7 @@
 
 #include "hdhomerun.h"
 
+/*
 struct hdhomerun_device_t {
 	struct hdhomerun_control_sock_t *cs;
 	struct hdhomerun_video_sock_t *vs;
@@ -33,6 +34,7 @@ struct hdhomerun_device_t {
 	char name[32];
 	char model[32];
 };
+*/
 
 int hdhomerun_device_set_device(struct hdhomerun_device_t *hd, uint32_t device_id, uint32_t device_ip)
 {

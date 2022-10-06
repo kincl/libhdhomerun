@@ -23,7 +23,20 @@
 #define HDHOMERUN_STATUS_COLOR_YELLOW	0xFFFFFF00
 #define HDHOMERUN_STATUS_COLOR_GREEN	0xFF00C000
 
-struct hdhomerun_device_t;
+struct hdhomerun_device_t {
+  struct hdhomerun_control_sock_t *cs;
+  struct hdhomerun_video_sock_t *vs;
+  struct hdhomerun_debug_t *dbg;
+  struct hdhomerun_channelscan_t *scan;
+  uint32_t multicast_ip;
+  uint16_t multicast_port;
+  uint32_t device_id;
+  unsigned int tuner;
+  uint32_t lockkey;
+  char name[32];
+  char model[32];
+};
+
 struct hdhomerun_device_allocation_t;
 
 struct hdhomerun_tuner_status_t {
